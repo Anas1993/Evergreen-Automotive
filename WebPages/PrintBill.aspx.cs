@@ -41,20 +41,21 @@ public partial class WebPages_ViewBill : System.Web.UI.Page
         
     }
 
-    private static PdfPCell PhraseCell(Phrase phrase, int align)
-    {
+    //private static PdfPCell PhraseCell(Phrase phrase, int align)
+    //{
+
        
-    }
+    //}
 
-    private static PdfPCell ImageCell(string path, float scale, int align)
-    {
+    //private static PdfPCell ImageCell(string path, float scale, int align)
+    //{
         
-    }
+    //}
 
-    public static string NumberToWords(int number)
-    {
+    //public static string NumberToWords(int number)
+    //{
 		
-	}
+    //}
 
 
 }
