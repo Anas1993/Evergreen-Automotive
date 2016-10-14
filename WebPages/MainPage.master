@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainPage.master.cs" Inherits="WebPages_MainPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Welcome</title>
+
+    <link href="../Assets/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="../Assets/Font-Awesome/CSS/font-awesome.css" rel="stylesheet" />
+    <link href="../Assets/CSS/zabuto_calendar.css" rel="stylesheet" />
+    <link href="../Assets/CSS/jquery.gritter.css" rel="stylesheet" />
+    <link href="../Assets/Line/style.css" rel="stylesheet" />
+    <link href="../Assets/CSS/style.css" rel="stylesheet" />
+    <link href="../Assets/CSS/style-responsive.css" rel="stylesheet" />
+    <script src="../Assets/Javascript/Chart.js"></script>
+
+
+    <script src="jquery-ui.js"></script>
+    <script src="jquery-1.10.2.js"></script>
+    <link href="jquery-ui.structure.css" rel="stylesheet" />
+    <link href="jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="jquery-ui.theme.css" rel="stylesheet" />
+    <link href="jquery-ui.theme.min.css" rel="stylesheet" />
+
+    <%--<script type = "text/javascript" >
+          function preventBack() { window.history.forward(); }
+          setTimeout("preventBack()", 0);
+          window.onunload = function () { null };
+     </script>
+
+     <script>
+          $(function ()
+          {
+               $('.datepicker').datepicker();
+          });
+     </script>--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <section id="container">
+            <!--header start-->
+            <header class="header black-bg" style="background-color: #395795;">
+                <div><a class="logo"><b>EverGreen Automotive</b></a></div>
+
+            </header>
+            <!--header end-->
+
+            <!--sidebar start-->
+            <aside>
+                <div id="sidebar" class="nav-collapse" style="background-color: white; width: 210px; border: solid; border-color: #395795;">
+                    <ul class="sidebar-menu" id="nav-accordion">
+                     
+
+                        <li class="mt">
+                            <a href="Bill.aspx">
+                                <span>New Bill</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <span>Logs</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="AddLog.aspx">New Log</a></li>
+                                <li><a href="ViewLog.aspx">View Log</a></li>
+                                <li><a href="UpdateLog.aspx">Edit Log</a></li>
+                                <li><a href="DeleteLog.aspx">Delete Log</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <span>Cars</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="AddCars.aspx">Add Car</a></li>
+                                <li><a href="UpdateCars.aspx">Edit Car</a></li>
+                                <li><a href="DeleteCars.aspx">Delete Car</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <span>Drivers</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="AddDriver.aspx">Add Drivers</a></li>
+                                <li><a href="UpdateDrivers.aspx">Edit Drivers</a></li>
+                                <li><a href="DeleteDrivers.aspx">Delete Drivers</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <span>Billing</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="ViewBill.aspx">ViewBill By Date</a></li>
+                                <li><a href="UpdateBill.aspx">Edit Bill</a></li>
+                                <li><a href="DeleteBill.aspx">Delete Bill</a></li>
+                                <li><a href="PrintBill.aspx">Print Bill</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mt">
+                            <a href="AboutUs.aspx">
+                                <span>About Software</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </aside>
+            <!--sidebar end-->
+
+            <!--main content start-->
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <!--footer start-->
+            <footer class="site-footer" style="background-color: #395795; width: 1175px; bottom: 0px; position: fixed; margin-left: 210px;">
+                <%--margin-left:210px--%>
+                <div style="padding-left: 450px;">
+                    © 2016 EverGreen Automotive. All Rights Reserved.
+                </div>
+            </footer>
+            <!--footer end-->
+
+        </section>
+
+        <script src="../Assets/Javascript/jquery.js"></script>
+        <script src="../Assets/Javascript/jquery-1.8.3.min.js"></script>
+        <script src="../Assets/Javascript/bootstrap.min.js"></script>
+        <script src="../Assets/Javascript/jquery.dcjqaccordion.2.7.js"></script>
+        <script src="../Assets/Javascript/jquery.scrollTo.min.js"></script>
+        <script src="../Assets/Javascript/jquery.nicescroll.js"></script>
+        <script src="../Assets/Javascript/jquery.sparkline.js"></script>
+
+        <script src="../Assets/Javascript/common-scripts.js"></script>
+        <script src="../Assets/Javascript/jquery.gritter.js"></script>
+        <script src="../Assets/Javascript/gritter-conf.js"></script>
+        <script src="../Assets/Javascript/sparkline-chart.js"></script>
+        <script src="../Assets/Javascript/zabuto_calendar.js"></script>
+
+        <%--<script type="application/javascript">
+               $(document).ready(function () {
+                    $("#date-popover").popover({ html: true, trigger: "manual" });
+                    $("#date-popover").hide();
+                    $("#date-popover").click(function (e) {
+                         $(this).hide();
+                    });
+
+                    $("#my-calendar").zabuto_calendar({
+                         action: function () {
+                              return myDateFunction(this.id, false);
+                         },
+                         action_nav: function () {
+                              return myNavFunction(this.id);
+                         },
+                         ajax: {
+                              url: "show_data.php?action=1",
+                              modal: true
+                         },
+                         legend: [
+                            { type: "text", label: "Special event", badge: "00" },
+                            { type: "block", label: "Regular event", }
+                         ]
+                    });
+               });
+
+
+               function myNavFunction(id) {
+                    $("#date-popover").hide();
+                    var nav = $("#" + id).data("navigation");
+                    var to = $("#" + id).data("to");
+                    console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+               }
+          </script>--%>
+    </form>
+</body>
+</html>
