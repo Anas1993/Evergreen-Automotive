@@ -12,7 +12,7 @@
 
             <div class="form-panel">
                 <div>
-                    <label style="color: red; font-weight: 100;">*  This information is required</label>
+   
 
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Car Registration Number<label style="color: red;"> &nbsp*</label></label>
