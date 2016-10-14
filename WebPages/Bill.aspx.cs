@@ -76,41 +76,7 @@ public partial class WebPages_Billings : System.Web.UI.Page
 
     protected void ddl_regNum_SelectedIndexChanged(object sender, EventArgs e)
     {
-        string regNo = ddl_regNum.SelectedValue.ToString();
-        try
-        {
-
-            string query = "SELECT * FROM Car where CarRegNo = '" + regNo + "'";
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            connection.Open();
-
-            SqlDataReader da = cmd.ExecuteReader();
-            da.Read();
-
-            if (da.HasRows)
-            {
-                txt_CarModel.Text = da[2].ToString();
-                txt_CarColour.Text = da[3].ToString();
-                txt_CarMake.Text = da[4].ToString();
-                txt_CarClass.Text = da[5].ToString();
-            }
-            /*  = ModelTXT;
-              = ColourTXT;
-            = MakeTXT;
-             = ClassTXT;
-        
-             */
-        }
-
-        catch (Exception msg)
-        {
-            Response.Write(msg.ToString());
-        }
-        finally
-        {
-            connection.Close();
-        }
+       
     }
 
 
